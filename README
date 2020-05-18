@@ -1,0 +1,27 @@
+#Build project 
+Pom file must have final, target and all dependencies needed to build project via command line. 
+After build ensure .jar files are created in target folder of project. (.jar name given in pom file) 
+then run java -cp command - .jar file names are different for each project. 
+
+cd /Users/faatimabismilla/eclipse-workspace/Elleven/ellevenTestAndroid 
+mvn clean package -DskipTests
+cd target (cd into target folder of project) - .jar and test .jar docker files must be present
+java -cp ellevenTestAndroid.jar:ellevenTestAndroid-tests.jar:libs/* org.testng.TestNG ../testng.xml
+
+
+#Go back to project folder
+cd ..
+#Run in docker container - provide image name : do not change image name only the version name 
+# testadmin always and 0.1 increment for every new build
+docker build -t testandroid:1 . 
+
+#Run
+docker run -it -v /Users/faatimabismilla/Documents/output:/test-output testandroid:1
+
+#Tag and then push
+docker tag testandroid:1
+docker tag testandroid:1 kwregistry.azurecr.io/testandroid:1
+
+docker push kwregistry.azurecr.io/testandroid:1
+
+Go to : portal.azure.com link to see image there 

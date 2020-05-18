@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="elleven.Listeners"/>
+    <listener class-name="elleven.ExecutionListener"/>
+  </listeners>
+  <test thread-count="5" name="Elleven Android(failed)">
+    <classes>
+      <class name="elleven.Profile">
+        <methods>
+          <include name="setUp"/>
+          <include name="taxNumber"/>
+          <include name="afterTest"/>
+          <include name="name"/>
+          <include name="mobileNumber"/>
+          <include name="killAllNodes"/>
+          <include name="lastName"/>
+          <include name="addPaymentTypeDebit"/>
+          <include name="taxCertificates"/>
+          <include name="settingsPermissions"/>
+        </methods>
+      </class> <!-- elleven.Profile -->
+      <class name="elleven.Login">
+        <methods>
+          <include name="setUp"/>
+          <include name="afterTest"/>
+          <include name="killAllNodes"/>
+          <include name="automaticSignIn"/>
+          <include name="signup"/>
+        </methods>
+      </class> <!-- elleven.Login -->
+    </classes>
+  </test> <!-- Elleven Android(failed) -->
+</suite> <!-- Failed suite [Suite] -->
