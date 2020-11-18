@@ -1,27 +1,49 @@
-#Build project 
-Pom file must have final, target and all dependencies needed to build project via command line. 
-After build ensure .jar files are created in target folder of project. (.jar name given in pom file) 
-then run java -cp command - .jar file names are different for each project. 
+Author : Faatima Bismilla
+Read me last updated : 17 November 2020
+Project inception : 16 November 2020
 
-cd /Users/faatimabismilla/eclipse-workspace/Elleven/ellevenTestAndroid 
-mvn clean package -DskipTests
-cd target (cd into target folder of project) - .jar and test .jar docker files must be present
-java -cp ellevenTestAndroid.jar:ellevenTestAndroid-tests.jar:libs/* org.testng.TestNG ../testng.xml
+#Introduction/Test design
+This is the android mobile automation project for UAMPMusicPlayerAPP.apk
+Developed using : Selenium , Appium , Java 
+Design : Page object model with page factories
+Framework : TestNG 
+IDE : Eclpise
+Build : Maven 
+Reporting : Extent report from Test NG 
+Github Repo : https://github.com/Faatima7861/global-kinetic-android-assessment.git
+Versions of software : refer to pom.xml file in project
+
+#Get up and running locally 
+1. Clone the project from gihub
+2. Import into eclipse IDE 
+3. Update project (Right click on pom.xml -> Maven -> Update Project) 
+4. On Update being successful with successful downloading of dependencies you can run the project. 
+5. Right click on testng.xml -> Run as -> TestNG Suite
+NB : Ensure your machine is set up correctly for android mobile automation. 
+It is best to follow an online tutorial on how to set up android studio, sdk, appium etc on your machine. 
+Run appium-doctor in your terminal to check if everything is set up correctly. 
+If the set up is not correct - this project will fail to run locally. 
 
 
-#Go back to project folder
-cd ..
-#Run in docker container - provide image name : do not change image name only the version name 
-# testadmin always and 0.1 increment for every new build
-docker build -t testandroid:1 . 
+#Potential errors that may occur : 
+1. Not all appium dependencies are correctly installed on your machine. 
+2. Run 'appium-doctor' in your terminal to view if all dependencies are satisfied.
+3. Class paths not found. Try and update the project again. Check version of dependency it is complaining abaout. 
+4. Cannot find adb - ensure android home is set. Check eclipse IDE project. Run -> Run configurations -> Environments 
+   /Users/{user}/Library/Android/sdk must be added as ANDROID_HOME environment variable path. 
+5. Environment paths for java may not be set correctly. 
 
-#Run
-docker run -it -v /Users/faatimabismilla/Documents/output:/test-output testandroid:1
+#Reporting
+After successful test execution, The ExtentReporterNG.java class will create a folder in your user directory. 
+The Reports folder will contain an index.html file that you can open in your browser. If you are unable to find this 
+search your laptop for a Reports folder. 
+If a Reports folder is not created, manually create one and re-run the test suite locally. 
+The index.html file will then be generated in that location. 
+Example of test result location locally : file:///Users/faatima/eclipse-workspace/DemoWorkspace/global-kinetic-android/Reports/index.html
 
-#Tag and then push
-docker tag testandroid:1
-docker tag testandroid:1 kwregistry.azurecr.io/testandroid:1
+Helpful information : 
+1. Appium server and a test emulator starts and stops programatically. 
+2. Ensure that you configure a test emulator in android studio as well. 
+3. App file location 
 
-docker push kwregistry.azurecr.io/testandroid:1
 
-Go to : portal.azure.com link to see image there 

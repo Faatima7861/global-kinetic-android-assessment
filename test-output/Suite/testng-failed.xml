@@ -2,34 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <listeners>
-    <listener class-name="elleven.Listeners"/>
-    <listener class-name="elleven.ExecutionListener"/>
+    <listener class-name="musicPlayTests.Listeners"/>
+    <listener class-name="musicPlayTests.ExecutionListener"/>
   </listeners>
-  <test thread-count="5" name="Elleven Android(failed)">
+  <test thread-count="5" name="Music Play Android(failed)">
     <classes>
-      <class name="elleven.Profile">
+      <class name="musicPlayTests.Userflow">
         <methods>
-          <include name="setUp"/>
-          <include name="taxNumber"/>
-          <include name="afterTest"/>
-          <include name="name"/>
-          <include name="mobileNumber"/>
           <include name="killAllNodes"/>
-          <include name="lastName"/>
-          <include name="addPaymentTypeDebit"/>
-          <include name="taxCertificates"/>
-          <include name="settingsPermissions"/>
-        </methods>
-      </class> <!-- elleven.Profile -->
-      <class name="elleven.Login">
-        <methods>
           <include name="setUp"/>
           <include name="afterTest"/>
-          <include name="killAllNodes"/>
-          <include name="automaticSignIn"/>
-          <include name="signup"/>
+          <include name="motoCrossSong"/>
         </methods>
-      </class> <!-- elleven.Login -->
+      </class> <!-- musicPlayTests.Userflow -->
     </classes>
-  </test> <!-- Elleven Android(failed) -->
+  </test> <!-- Music Play Android(failed) -->
 </suite> <!-- Failed suite [Suite] -->

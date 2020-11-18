@@ -2,11 +2,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>elleven</groupId>
-	<artifactId>ellevenTestAndroid</artifactId>
+	<groupId>globalKinetic</groupId>
+	<artifactId>globalKineticAndroid</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>ellevenTestAndroid</name>
+	<name>globalKineticAndroid</name>
 	<url>http://maven.apache.org</url>
 
 
@@ -23,7 +23,7 @@
 				<filtering>true</filtering>
 			</resource>
 		</resources>
-		<finalName>ellevenTestAndroid</finalName>
+		<finalName>global-kinetic-android</finalName>
 		<plugins>
 
 			<plugin>
@@ -99,17 +99,23 @@
 			<version>6.8</version>
 			<scope>compile</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>3.0.6</version>
+			<version>5.0.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
 		</dependency>
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>2.41.2</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>

@@ -3,16 +3,16 @@
 <suite name="Suite">
 
 <listeners>
-		<listener class-name="elleven.Listeners" />
-		<listener class-name="elleven.ExecutionListener" />
+		<listener class-name="musicPlayTests.Listeners" />
+		<listener class-name="musicPlayTests.ExecutionListener" />
 	</listeners>
 	
 	
-	<test thread-count="5" name="Elleven Android">
+	<test thread-count="5" name="Music Play Android">
 		<classes>
 		
-			<class name="elleven.Login" />
-			<class name="elleven.Profile" />
+			<class name="musicPlayTests.Userflow" />
+			
 			
 		</classes>
 	</test> <!-- Test -->

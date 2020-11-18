@@ -1,4 +1,4 @@
-package elleven;
+package musicPlay;
 
 import org.testng.annotations.Test;
 
@@ -43,6 +43,7 @@ public class Base {
 	public static AndroidDriver<AndroidElement> driver;
 	public static AppiumServiceBuilder builder;
 	public DesiredCapabilities cap;
+	public static Properties prop;
 
 	@BeforeTest
 	public void setUp() throws InterruptedException, IOException {
@@ -56,6 +57,7 @@ public class Base {
 	}
 
 	public AppiumDriverLocalService startServer() throws InterruptedException {
+
 		boolean flag = checkIfServerIsRunning(4723);
 		if (!flag) {
 			// service = AppiumDriverLocalService.buildDefaultService();
@@ -128,22 +130,25 @@ public class Base {
 		 * System.getProperty("deviceName"); if (device.contains("emulator")) {
 		 * startEmulator(); }
 		 */
+		// https://github.com/niche-tester/gk-assessment-qa-engineer/releases/download/1.0.0/UAMPMusicPlayerApp.apk
 
 		startEmulator();
-		// capabilities.setCapability("isHeadless", true);
-		// capabilities.setCapability("avdArgs", "-no-window");
-		// capabilities.setCapability("avdArgs", "-no-skin");
-		// capabilities.setCapability("avdArgs", "-no-audio");
+		prop = new Properties();
+
+		FileInputStream appURL = new FileInputStream(
+				System.getProperty("user.dir") + "//src//main//java//resources//global.properties");
+
+		prop.load(appURL);
+		String appLocation = prop.getProperty("appLocation");
+		System.out.println(appLocation);
+
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 14);
-		// capabilities.setCapability("skipUnlock", "true");
+		capabilities.setCapability("app", appLocation);
 
-		capabilities.setCapability(MobileCapabilityType.APP,
-				System.getProperty("user.dir") + "/elleven-4may-2020-v1.apk");
-				// System.getProperty("user.dir") + "/kwela17Febdebug.apk");
-				// System.getProperty("user.dir") + "/elleven-22April.apk");
-		// System.getProperty("user.dir") + "/elleven-1Apr-2020-v1.apk");
+		// capabilities.setCapability(MobileCapabilityType.APP,
+		// System.getProperty("user.dir") + "/UAMPMusicPlayerApp.apk");
 		capabilities.setCapability("noReset", true);
 		// capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
@@ -153,11 +158,6 @@ public class Base {
 
 	}
 
-	// public static void getScreenshot(String s) throws IOException {
-	// File scrfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	// FileUtils.copyFiles(scrfile, new File(System.getProperty("user.dir") + "\\" +
-	// s + ".png"));
-	// }
 	@BeforeTest
 	public void killAllNodes() throws IOException, InterruptedException {
 		// taskkill /F /IM node.exe -> windows
