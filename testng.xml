@@ -5,6 +5,7 @@
 <listeners>
 		<listener class-name="musicPlayTests.Listeners" />
 		<listener class-name="musicPlayTests.ExecutionListener" />
+		<listener class-name="resources.ExtentReporterNG" />
 	</listeners>
 	
 	

@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="57589" started-at="2020-11-18T11:10:13 SAST" finished-at="2020-11-18T11:11:11 SAST">
+  <suite name="Suite" duration-ms="47510" started-at="2020-11-18T11:21:21 SAST" finished-at="2020-11-18T11:22:09 SAST">
     <groups>
     </groups>
-    <test name="Music Play Android" duration-ms="57589" started-at="2020-11-18T11:10:13 SAST" finished-at="2020-11-18T11:11:11 SAST">
+    <test name="Music Play Android" duration-ms="47510" started-at="2020-11-18T11:21:21 SAST" finished-at="2020-11-18T11:22:09 SAST">
       <class name="musicPlayTests.Userflow">
-        <test-method status="PASS" signature="killAllNodes()[pri:0, instance:musicPlayTests.Userflow@130161f7]" name="killAllNodes" is-config="true" duration-ms="3026" started-at="2020-11-18T11:10:13 SAST" finished-at="2020-11-18T11:10:16 SAST">
+        <test-method status="PASS" signature="killAllNodes()[pri:0, instance:musicPlayTests.Userflow@2c767a52]" name="killAllNodes" is-config="true" duration-ms="3017" started-at="2020-11-18T11:21:21 SAST" finished-at="2020-11-18T11:21:24 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- killAllNodes -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:musicPlayTests.Userflow@130161f7]" name="setUp" is-config="true" duration-ms="41016" started-at="2020-11-18T11:10:16 SAST" finished-at="2020-11-18T11:10:57 SAST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:musicPlayTests.Userflow@2c767a52]" name="setUp" is-config="true" duration-ms="31109" started-at="2020-11-18T11:21:24 SAST" finished-at="2020-11-18T11:21:55 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="genres()[pri:0, instance:musicPlayTests.Userflow@130161f7]" name="genres" duration-ms="1090" started-at="2020-11-18T11:10:57 SAST" finished-at="2020-11-18T11:10:58 SAST">
+        <test-method status="PASS" signature="genres()[pri:0, instance:musicPlayTests.Userflow@2c767a52]" name="genres" duration-ms="2029" started-at="2020-11-18T11:21:55 SAST" finished-at="2020-11-18T11:21:57 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- genres -->
-        <test-method status="PASS" signature="rock()[pri:1, instance:musicPlayTests.Userflow@130161f7]" name="rock" duration-ms="2359" started-at="2020-11-18T11:10:58 SAST" finished-at="2020-11-18T11:11:01 SAST">
+        <test-method status="PASS" signature="rock()[pri:1, instance:musicPlayTests.Userflow@2c767a52]" name="rock" duration-ms="205" started-at="2020-11-18T11:21:57 SAST" finished-at="2020-11-18T11:21:58 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- rock -->
-        <test-method status="PASS" signature="motoCrossSong()[pri:2, instance:musicPlayTests.Userflow@130161f7]" name="motoCrossSong" duration-ms="238" started-at="2020-11-18T11:11:01 SAST" finished-at="2020-11-18T11:11:01 SAST">
+        <test-method status="PASS" signature="motoCrossSong()[pri:2, instance:musicPlayTests.Userflow@2c767a52]" name="motoCrossSong" duration-ms="1137" started-at="2020-11-18T11:21:58 SAST" finished-at="2020-11-18T11:21:59 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- motoCrossSong -->
-        <test-method status="PASS" signature="pause()[pri:3, instance:musicPlayTests.Userflow@130161f7]" name="pause" duration-ms="1733" started-at="2020-11-18T11:11:01 SAST" finished-at="2020-11-18T11:11:03 SAST">
+        <test-method status="PASS" signature="pause()[pri:3, instance:musicPlayTests.Userflow@2c767a52]" name="pause" duration-ms="1887" started-at="2020-11-18T11:21:59 SAST" finished-at="2020-11-18T11:22:01 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pause -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:musicPlayTests.Userflow@130161f7]" name="afterTest" is-config="true" duration-ms="8090" started-at="2020-11-18T11:11:03 SAST" finished-at="2020-11-18T11:11:11 SAST">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:musicPlayTests.Userflow@2c767a52]" name="afterTest" is-config="true" duration-ms="8083" started-at="2020-11-18T11:22:01 SAST" finished-at="2020-11-18T11:22:09 SAST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
